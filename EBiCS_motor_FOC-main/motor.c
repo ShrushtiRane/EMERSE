@@ -595,7 +595,7 @@ void motor_slow_loop(MotorStatePublic_t* motorStatePublic) {
       }
     }
 
-    // run KV detection
+    // run KV detection  https://electronics.stackexchange.com/questions/262106/why-do-brushless-motors-have-a-kv-rating
     // KV detection works with ramping up uq until it reaches 1900, than it is ramped down to near zero again. 
     if (MS.KV_detect_flag > 0) {
       static int8_t dir = 1;
